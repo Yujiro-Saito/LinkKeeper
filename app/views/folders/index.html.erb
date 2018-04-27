@@ -1,0 +1,17 @@
+<h1>フォルダ一覧</h1>
+<table>
+  <tr>
+    <th>フォルダ名</th>
+  </tr>
+
+  <% @folders.each do |f| %>
+    <tr>
+      <td><%= f.title %></td>
+      <td><%= link_to "Show", folder_path(f) %></td>
+      <td><%= link_to "Edit", edit_folder_path(f) %></td>
+      <td><%= link_to "Delete", folder_path(f), method: :delete, data: {confirm: "Are you sure?"} %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to "新規作成", new_folder_path %>
