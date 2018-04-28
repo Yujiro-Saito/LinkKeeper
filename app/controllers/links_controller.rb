@@ -5,8 +5,7 @@ class LinksController < ApplicationController
     @links = Link.all
   end
 
-
-
+  
 
 
 

@@ -1,6 +1,16 @@
 <p>
-  <strong>Title</strong>
+  <strong>フォルダ名</strong>
   <%= @folder.title %>
 </p>
 
-<%= link_to "Home", folders_path %>
+
+<% @folder.links.each do |link| %>
+  <h3><strong><%= link.name %></strong></h3>
+  <ul>
+    <li><%= link.url %></li>
+  </ul>
+<% end %>
+
+
+
+<%= link_to "戻る", folders_path %>
