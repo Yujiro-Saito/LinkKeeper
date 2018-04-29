@@ -51,3 +51,19 @@
 .col-sm-6 {
   padding-bottom: 20px;
 }
+
+/* ----------------------------------------------- */
+/* Folder design */
+/* ----------------------------------------------- */
+
+#addFolderButton {
+    background-color: #2980b9;
+    width: 320px;
+    margin-left: 30px;
+
+}
+
+
+
+
+

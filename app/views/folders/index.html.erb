@@ -2,56 +2,26 @@
   <div class="row">
 
 
-    <div class="col-sm-6">
-
-      <div class="card">
-        <div class="card-body">
-          <h4 class="card-title">Yahoo!</h4>
-          <p class="card-text">Looks like the Sun has returned. Here's why.</p>
-          <a href="#" class="btn btn-primary">See</a>
-        </div>
-      </div>
-
-    </div>
+    <% @folders.each do |f| %>
 
     <div class="col-sm-6">
 
       <div class="card">
         <div class="card-body">
-          <h4 class="card-title">Zozotown</h4>
+          <h4 class="card-title"><%= f.title %></h4>
           <p class="card-text">Looks like the Sun has returned. Here's why.</p>
-          <a href="#" class="btn btn-primary">See</a>
+          <%= link_to 'チェック', folder_path(f),  class: "btn btn-primary" %>
+          <%= link_to '編集', edit_folder_path(f),  class: "btn btn-primary" %>
+          <%= link_to '削除', folder_path(f), method: :delete, data: {confirm: "Are you sure?"},  class: "btn btn-primary" %>
         </div>
       </div>
 
     </div>
-
-    <div class="col-sm-6">
-
-      <div class="card">
-        <div class="card-body">
-          <h4 class="card-title">Pinterest</h4>
-          <p class="card-text">Looks like the Sun has returned. Here's why.</p>
-          <a href="#" class="btn btn-primary">See</a>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="col-sm-6">
-
-      <div class="card">
-        <div class="card-body">
-          <h4 class="card-title">Adobe</h4>
-          <p class="card-text">Looks like the Sun has returned. Here's why.</p>
-          <a href="#" class="btn btn-primary">See</a>
-        </div>
-      </div>
-
-    </div>
-
+    <% end %>
   </div>
 </div>
+
+<%= link_to "新規作成", new_folder_path, class: "btn btn-primary", id: "addFolderButton" %>
 
 <!-- jQuery library -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -74,4 +44,3 @@ $(function () {
   $('[data-toggle="popover"]').popover()
 })
 </script>
-
