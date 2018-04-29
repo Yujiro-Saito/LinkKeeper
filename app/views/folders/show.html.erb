@@ -9,6 +9,8 @@
   <ul>
     <li><%= link.url %></li>
   </ul>
+  <p><%= link_to "編集", edit_link_path(link) %></p>
+  <p><%= link_to "削除", link_path(link), method: :delete, data: {confirm: "Are you sure?"} %></p>
 <% end %>
 
 
