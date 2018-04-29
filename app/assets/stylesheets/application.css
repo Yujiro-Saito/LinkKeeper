@@ -13,3 +13,41 @@
  *= require_tree .
  *= require_self
  */
+/* ----------------------------------------------- */
+/* Top Navigation Bar */
+/* ----------------------------------------------- */
+
+.navMenu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #2980b9;
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 40px;
+
+}
+
+.navMenu li {
+    float: left;
+}
+
+.navMenu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* ----------------------------------------------- */
+/* Card design */
+/* ----------------------------------------------- */
+
+.container-fluid {
+  padding-top: 30px;
+}
+
+.col-sm-6 {
+  padding-bottom: 20px;
+}

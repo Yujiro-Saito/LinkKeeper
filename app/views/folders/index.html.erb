@@ -1,17 +1,77 @@
-<h1>フォルダ一覧</h1>
-<table>
-  <tr>
-    <th>フォルダ名</th>
-  </tr>
+<div class="container-fluid">
+  <div class="row">
 
-  <% @folders.each do |f| %>
-    <tr>
-      <td><%= f.title %></td>
-      <td><%= link_to "Show", folder_path(f) %></td>
-      <td><%= link_to "Edit", edit_folder_path(f) %></td>
-      <td><%= link_to "Delete", folder_path(f), method: :delete, data: {confirm: "Are you sure?"} %></td>
-    </tr>
-  <% end %>
-</table>
 
-<%= link_to "新規作成", new_folder_path %>
+    <div class="col-sm-6">
+
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Yahoo!</h4>
+          <p class="card-text">Looks like the Sun has returned. Here's why.</p>
+          <a href="#" class="btn btn-primary">See</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-sm-6">
+
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Zozotown</h4>
+          <p class="card-text">Looks like the Sun has returned. Here's why.</p>
+          <a href="#" class="btn btn-primary">See</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-sm-6">
+
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Pinterest</h4>
+          <p class="card-text">Looks like the Sun has returned. Here's why.</p>
+          <a href="#" class="btn btn-primary">See</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-sm-6">
+
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Adobe</h4>
+          <p class="card-text">Looks like the Sun has returned. Here's why.</p>
+          <a href="#" class="btn btn-primary">See</a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- jQuery library -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+<!-- Popper -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+<!-- Latest compiled and minified Bootstrap JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- Initialize Bootstrap functionality -->
+<script>
+// Initialize tooltip component
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+
+// Initialize popover component
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
+</script>
+
