@@ -1,6 +1,9 @@
 class LinksController < ApplicationController
 
+  require 'nokogiri'
+  require 'open-uri'
   before_action :set_link, only: [:show, :edit, :update, :destroy]
+
 
   def index
     @links = Link.all
@@ -20,6 +23,22 @@ class LinksController < ApplicationController
 
   def new
     @link = Link.new(folder_id: params[:folder_id])
+
+    url = 'https://www.airbnb.jp/'
+
+    charset = nil
+    html = open(url) do |f|
+      charset = f.charset
+      f.read
+    end
+
+    doc = Nokogiri::HTML.parse(html, charset)
+
+    @linkTitle = p doc.title
+
+    @linkImage = p doc.css('//meta[property="og:image"]/@content').to_s
+
+
   end
 
   def edit

@@ -11,7 +11,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'hirb'
-gem 'hirb-unicode'  
+gem 'hirb-unicode'
+gem 'nokogiri', '~> 1.8', '>= 1.8.2'
 
 group :development, :test do
   gem 'byebug'
